@@ -3,6 +3,8 @@
 .topnav {
   background-color: rgb(40, 39, 39);
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .topnav a{
@@ -64,7 +66,8 @@
 }
 
 .shopContainer {
-  background-color: grey;
+  padding-top: 60px;
+  background-color: rgb(201, 201, 201);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 100px;
@@ -101,5 +104,32 @@ font-family: 'Lora', serif;;
 
 .title {
 font-weight: 700;
+}
+
+.cartButton {
+  margin-top: 10px;
+  align-items: center;
+  background-color: #5f85aa;
+  border: 0;
+  border-radius: 100px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 30px;
+  min-width: 0px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.cartButton:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
 }
 

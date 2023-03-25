@@ -1,12 +1,15 @@
 import Item from "./Item";
 
-export default function Shop({ items }) {
+export default function Shop({ items, basket, setBasket }) {
   return (
     <div>
       <div className="topnav">
-        <a href="/">Home</a>
-        <a href="/shop">Shop</a>
-        <a href="/cart">Cart</a>
+        <div>
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="/cart">Cart</a>
+        </div>
+        <div className="brand">COLOURS</div>
       </div>
       <div className="shopContainer">
         {items.map((anItem) => {
@@ -15,6 +18,9 @@ export default function Shop({ items }) {
                     itemName={anItem.itemName}
                     itemPrice={anItem.itemPrice}
                     colorId={anItem.colorId}
+                    itemId={anItem.itemId}
+                    basket={basket}
+                    setBasket={setBasket}
                     />
             )
         })
@@ -24,6 +30,3 @@ export default function Shop({ items }) {
   );
 }
 
-{
-  /* <div>{items[0].itemDescription}</div> */
-}
