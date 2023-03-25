@@ -1,25 +1,21 @@
-import './App.css';
-import React, { useState } from 'react';
+import "./App.css";
 
 function App() {
-
-
-  const [item, setItem] = useState(
-    {itemTitle:"",
-    itemDescription:"",
-    itemType:"",
-    itemPrice:"",
-    itemImg:""
-  })
-  
   return (
     <div className="App">
       <div className="topnav">
-        <a href="/">Home</a>
-        <a href="/shop">Shop</a>
-        <a href="/cart">Cart</a>
+        <div>
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="/cart">Cart</a>
+        </div>
+        <div className="brand">COLOURS</div>
       </div>
-      <div className='homeContainer'>Shitbikes.de</div>
+      <div className="homeContainer">
+        <a href="/shop" className="homeContent">
+          COLOURS
+        </a>
+      </div>
     </div>
   );
 }
