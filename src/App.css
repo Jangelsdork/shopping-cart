@@ -38,13 +38,18 @@
 }
 
 .homeContent:hover {
-  color: blueviolet;
+  background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(50, 145, 247));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 400ms;
+  font-size: xx-large;
 
 }
 
 .homeContent {
   text-decoration: none;
   color: darkgreen;
+  font-size: large;
 
 }
 
@@ -57,3 +62,44 @@
   font-weight: 900;
   letter-spacing: 8px;
 }
+
+.shopContainer {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+
+
+.image {
+  height: 200px;
+  width: 200px;
+}
+
+.image:hover {
+  transition: 400ms;
+  height: 250px;
+  width: 250px;
+}
+
+.title, .price {
+margin-top: 20px;
+font-family: 'Lora', serif;;
+}
+
+
+.title {
+font-weight: 700;
+}
+
