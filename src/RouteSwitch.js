@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Shop from "./Components/Shop";
 import React, { useState } from "react";
+import Cart from "./Components/Cart";
 
 const RouteSwitch = () => {
   const itemFactory = (
@@ -62,7 +63,7 @@ const RouteSwitch = () => {
     autumnMuck,
     senfsation,
     somethingAwful,
-    peaches
+    peaches,
   ]);
 
   const [basket, setBasket] = useState([]);
@@ -71,7 +72,11 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Shop" element={<Shop items={items} basket={basket} setBasket={setBasket}/>} />
+        <Route
+          path="/Shop"
+          element={<Shop items={items} basket={basket} setBasket={setBasket} />}
+        />
+        <Route path="/cart" element={<Cart basket={basket} />} />
       </Routes>
     </BrowserRouter>
   );
