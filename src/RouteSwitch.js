@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, BrowserRouter } from "react-router-dom";
 import App from "./App";
 import Shop from "./Components/Shop";
 import React, { useState } from "react";
@@ -69,7 +69,7 @@ const RouteSwitch = () => {
   const [basket, setBasket] = useState([]);
 
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
       <Routes>
         <Route path="/" element={<App />} />
         <Route
@@ -77,9 +77,9 @@ const RouteSwitch = () => {
           element={<Shop items={items} basket={basket} setBasket={setBasket} />}
         />
         <Route path="/cart" element={<Cart basket={basket} />} />
-        <Route path="*" element={<App />} />
+        {/* <Route path="*" element={<App />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 export default RouteSwitch;
