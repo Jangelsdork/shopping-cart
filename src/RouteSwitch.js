@@ -77,6 +77,7 @@ const RouteSwitch = () => {
           element={<Shop items={items} basket={basket} setBasket={setBasket} />}
         />
         <Route path="/cart" element={<Cart basket={basket} />} />
+        <Route path="*" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
